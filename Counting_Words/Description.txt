@@ -1,0 +1,43 @@
+Part 1 - Words
+
+Consider the function shown below. The function returns true if the letters in the word are in alphabetical order, false otherwise.
+
+bool alpha(string s){
+	int ln = s.size();
+	for (int i = 0; i < ln - 1; ++i){
+		if (s[i] > s[i+1]){
+			return false;
+		}
+	}
+	return true;
+}
+Your task
+
+Consider the character comparison as the barometer instruction (s[i] > s[i+1]). Implement this function in C++ in the file words.cpp. The makefile contains a definition for words. You can build the executable words for this part of the assignment by running "make words". ("make" or "make all" will build both words and the executable for the second part of the assignment.)
+
+Determine the following for English words, using the provided list in file wordlist (do not convert to lowercase).
+
+The average length of a word
+The average number of character comparisons performed by alpha
+The average number of character comparisons as a function of n
+The O notation average case running time of alpha
+The O notation best case running time of alpha. Give an example input for when this case occurs.
+The O notation worst case the running time of alpha. Give an example input for when this case occurs.
+Note words.cpp contains code for reading wordlist.
+
+Edit the file word_answers.txt to contain your answers to 1., 2., 4., 5., and 6. above.
+The code in words.cpp writes your answer to 3. into a file average_comps.txt. Use the provided script comps.p to plot this using gnuplot. Running gnuplot comps.p will produce an image file average_comps.png with a plot in it.
+uname@hostname: ~$ ls average_comps.txt
+average_comps.txt
+uname@hostname: ~$ gnuplot comps.p
+uname@hostname: ~$ ls average_comps.png
+average_comps.png
+
+Part 2 - Mode
+
+Write a C++ function that obtains the mode of a set of integers stored in an array. Recall that the mode of a set is the most frequently occurring element.
+Please use the provided file mode.cpp, and fill in the function mode. Note: you must write any auxialliary functions you use, and may not include any external libraries to help (other than iostream and fstream). The makefile contains a definition for mode. You can build the executable mode for this part of the assignment by running "make mode".
+
+Testing
+
+The zipfile contains a testing script, test.py. You should run this, and other test cases, to verify correctness of your mode function.
