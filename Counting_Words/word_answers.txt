@@ -1,0 +1,4 @@
+The average length of a word is:9.58507
+
+The average number of character comparisons performed by this function is:1.85833
+The O notation average case running time of the algorithm is:O(n)
